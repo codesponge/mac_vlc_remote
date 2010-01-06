@@ -1,0 +1,5 @@
+Uses sinatra so, if you don't already have it, you need to
+	sudo gem install sinatra
+Then start it up with
+	ruby vlc_remote.rb
+Remote should be up at http://localhost:4666/
