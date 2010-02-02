@@ -6,87 +6,42 @@
 <head>
 	<title>VLC Remote</title>
 <script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="/base.css" type="text/css" media="screen and (min-device-width: 481px)"  charset="utf-8">
+
+<link rel="stylesheet" href="/mobile.css" type="text/css" media="only screen and (max-device-width: 480px)"  charset="utf-8">
+
+<style type="text/css" media="screen">
+
+</style>
+
 <script type="text/javascript" charset="utf-8">
 	function send_command (command) {
 		$.get("/cmd/" + command)
 	}
 </script>	
-<style type="text/css" media="screen">
 
-	body{
-		text-align:center;
-	}
-	#menu{
-/*		width:300px;*/
-		text-align:center;
-	}
-	#menu span.menu_item{
-		display: inline-block;
-		width:20%;
-	}
-	#menu .menu_item{
-		border:thin solid #273D2E;
-		padding:40px;
-		margin:20px;
-		font-size:400%;
-		text-align:center;
-		font-weight:bold;
-		background-color:#74AF83;
-	}
-	#menu span.mini{
-		display: inline;
-		font-size:100%;
-		padding: 18px;
-		margin: 10px;
-		width: 20px;
-		/*	top left*/
-		-moz-border-radius-topleft:10px;
-		-webkit-border-top-left-radius:10px;
-		/*	top right*/
-		-moz-border-radius-topright:10px;
-		-webkit-border-top-right-radius:10px;
-		/*	bottom right*/
-		-moz-border-radius-bottomright:10px;
-		-webkit-border-bottom-right-radius:10px;
-		/*	bottom left*/
-		-moz-border-radius-bottomleft:10px;
-		-webkit-border-bottom-left-radius:10px;
-	}
-	#menu *.rnd{
-		border-width:3px;
-		/*	top left*/
-		-moz-border-radius-topleft:30px;
-		-webkit-border-top-left-radius:30px;
-		/*	top right*/
-		-moz-border-radius-topright:30px;
-		-webkit-border-top-right-radius:30px;
-		/*	bottom right*/
-		-moz-border-radius-bottomright:30px;
-		-webkit-border-bottom-right-radius:30px;
-		/*	bottom left*/
-		-moz-border-radius-bottomleft:30px;
-		-webkit-border-bottom-left-radius:30px;
-	}
-</style>
 </head>
 
 <body>
-<h1>VLC Remote</h1>
 <div id='menu'>
-<div name='play' class='menu_item rnd' id='menu_play' onclick='send_command("play");'>PLAY</div>
+<h3>VLC Remote</h3>
+	
+<div  name='play' class='menu_item rnd' id='menu_play' onclick='send_command("play");'>PLAY</div>
 <span name='previous' class='menu_item rnd' id='menu_previous' onclick='send_command("previous");'>PREV</span>
 <span name='next' class='menu_item rnd' id='menu_next' onclick='send_command("next");'>NEXT</span><br/>
-<div name='mute' class='menu_item rnd' id='menu_mute' onclick='send_command("mute");'>MUTE</div>
+<div  name='mute' class='menu_item rnd' id='menu_mute' onclick='send_command("mute");'>MUTE</div>
 <span name='volumeDown' class='menu_item rnd' id='menu_volumeDown' onclick='send_command("volumeDown");'>Vol -</span>
 <span name='volumeUp' class='menu_item rnd' id='menu_volumeUp' onclick='send_command("volumeUp");'>Vol +</span><br/>
 <hr/>
-<h1>System Volume</h1>
+<h3>System Volume</h3>
 <% minis = ''
 8.times do |n|
 	minis << "<span class='menu_item mini' onclick='send_command(\"set volume #{n}\");'>#{n}</span>"
 end
 %>
 <%= minis %>
+
+<br/>by <a style='color:#FF8000;text-decoration:none;' href="http://www.codesponge.com/">CodeSponge</a>!
 
 </div>
 </body>
