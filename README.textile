@@ -2,21 +2,26 @@ h2. VLC remote (for mac)
 
 There may be more recent info on the "wiki":http://wiki.github.com/codesponge/mac_vlc_remote/
 
-
 h2. First get the code
 
 Clone or fork from "github":http://github.com/codesponge/mac_vlc_remote OR download this "zip file":http://github.com/downloads/codesponge/mac_vlc_remote/vlc_remote.zip 
 
 h2. In terminal
 
-Uses sinatra so, if you don't already have it, you need to
+Uses the  "sinatra":http://www.sinatrarb.com gem, if you don't already have it, you need to
 	@sudo gem install sinatra@
 
 go to mac_vlc_remote directory
-	@cd /path/to/where/you/put/vlc_remote@
+	@cd /path/to/where/you/put/mac_vlc_remote@
 	
-then start it up with
-	@ruby vlc_remote.rb@
+then start it up with one of these...
+	@ruby vlc_remote.rb@     # will run until you type control-c or close terminal window, shows activity.
+        @ruby vlc_remote.rb&@  # will run until you logout or kill the process
+
+h3. Note
+
+If you already have something else using port 4666 then you can edit the mac_vlc.rb file and change the
+@set :port, 4666@ line to use the port of your choosing.
 
 h2. Use
 
