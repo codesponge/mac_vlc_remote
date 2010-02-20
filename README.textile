@@ -1,3 +1,8 @@
+h2. VLC remote (for mac)
+
+There may be more recent info on the "wiki":http://wiki.github.com/codesponge/mac_vlc_remote/
+
+
 h2. First get the code
 
 Clone or fork from "github":http://github.com/codesponge/mac_vlc_remote OR download this "zip file":http://github.com/downloads/codesponge/mac_vlc_remote/vlc_remote.zip 
