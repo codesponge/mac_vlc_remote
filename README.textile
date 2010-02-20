@@ -1,0 +1,21 @@
+h2. First get the code
+
+Clone or fork from "github":http://github.com/codesponge/mac_vlc_remote OR download this "zip file":http://github.com/downloads/codesponge/mac_vlc_remote/vlc_remote.zip 
+
+h2. In terminal
+
+Uses sinatra so, if you don't already have it, you need to
+	@sudo gem install sinatra@
+
+go to mac_vlc_remote directory
+	@cd /path/to/where/you/put/vlc_remote@
+	
+then start it up with
+	@ruby vlc_remote.rb@
+
+h2. Use
+
+Remote should be up at "http://localhost:4666/":http://localhost:4666/
+
+(use http://COMPUTER.NAME:4666 or http://IP_ADDRESS:4666 ) on
+your local network to control via iPhone or other device

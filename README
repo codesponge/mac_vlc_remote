@@ -1,8 +1,0 @@
-Uses sinatra so, if you don't already have it, you need to
-	sudo gem install sinatra
-Then start it up with
-	ruby vlc_remote.rb
-Remote should be up at http://localhost:4666/
-
-(use http://COMPUTER.NAME:4666 or http://IP_ADDRESS:4666 ) on
-your local network to control via iPhone or other device
